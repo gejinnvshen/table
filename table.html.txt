@@ -1,0 +1,217 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<%@include file="/page/common/base.jsp" %>
+		<title>尽调报告</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no" />
+		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath }/resources/css/viewP.css" />
+	</head>
+	<body>
+	<input type="hidden" id="projectId" value="${projectId}"></input>
+
+<div class="borrowerCarHouse" >
+						<div class="borrower" id="borrower">
+							<p>一、餐厅店主基本信息</p>
+					        <table border="1" class="basic-info">				        	
+					        	<tr>
+					        		<td style="width:130px;">
+					        			<span>姓名：</span><em id="borrower_basic_name"></em>
+					        		</td>
+					        		<td>
+					        			<span>电话：</span><em id="borrower_basic_phone"></em>
+					        		</td>
+					        		<td style="width:110px;">
+					        			<span>股份占比：</span><em id="borrower_share_ratio"></em>
+					        		</td>				        		
+					        	</tr>
+					        	<tr>
+					        		<td>
+					        			<span>身份证号：</span><em id="borrower_id_card"></em>
+					        		</td>
+					        		<td colspan="2">
+					        			<span>户口所在地：</span><em id="borrower_account_place"></em>
+					        		</td>				        					        		
+					        	</tr>
+					        	<tr>
+					        		<td>
+					        			<span>现在住址：</span><em id="borrower_current_address"></em>
+					        		</td>
+					        		<td>
+					        			<span>是否缴纳社保：</span><em id="borrower_social_insurance"></em>
+					        		</td>
+					        		<td style="width:100px;">
+					        			<span>缴纳社保年限：</span><em id="borrower_insurance_years"></em>
+					        		</td>				        					        		
+					        	</tr>
+					        	<tr>
+					        		<td style="width:130px;">
+					        			<span>学历：</span><em id="borrower_education"></em>
+					        		</td>
+					        		<td>
+					        			<span>毕业院校：</span><em id="borrower_school"></em>
+					        		</td>
+					        		<td style="width:110px;">
+					        			<span>专业：</span><em id="borrower_profession"></em>
+					        		</td>				        		
+					        	</tr>
+					        	<tr>
+					        		<td style="width:130px;">
+					        			<span>配偶联系方式：</span><em id="borrower_spouse_contact"></em>
+					        		</td>
+					        		<td>
+					        			<span>配偶姓名：</span><em id="borrower_spouse_name"></em>
+					        		</td>
+					        		<td style="width:110px;">
+					        			<span>婚否：</span><em id="borrower_marry"></em>
+					        		</td>				        		
+					        	</tr>
+					        	<tr>
+					        		<td style="width:130px;">
+					        			<span>配偶身份证号：</span><em id="borrower_spouse_card"></em>
+					        		</td>
+					        		<td>
+					        			<span>子女数量：</span><em id="borrower_child_num"></em>
+					        		</td>
+					        		<td style="width:110px;">
+					        			<span>生育否：</span><em id="borrower_fertility"></em>
+					        		</td>				        		
+					        	</tr>
+					        	<tr>
+					        		<td colspan="3">
+					        			<span>全国法院被执行人信息查询：</span><em id="borrower_info_inquire"></em>
+					        		</td>				        						        		
+					        	</tr>
+					        	<tr>
+					        		<td colspan="3">
+					        			<span>深圳法院网上诉讼平台查询：</span><em id="borrower_platform_inquire"></em>
+					        		</td>				        						        		
+					        	</tr>
+					        	<tr>
+					        		<td><span>身份证正面图片</span><em>是</em></td>
+					        		<td><span>身份证背面图片</span><em>是</em></td>
+					        		<td><span>毕业证图片</span><em>是</em></td>
+					        	</tr>
+					        	<tr>
+					        		<td><span>学位证图片</span><em>是</em></td>
+					        		<td><span>结婚证图片</span><em>是</em></td>
+					        		<td><span>配偶身份证正面图片</span><em>是</em></td>
+					        	</tr>
+					        	<tr>
+					        		<td><span>配偶身份证背面图片</span><em>是</em></td>
+					        		<td><span>子女户口页资料图片</span><em>是</em></td>
+					        		<td><span>被执行人信息查询图片</span><em>是</em></td>
+					        	</tr>
+					        	<tr>
+					        		<td><span>诉讼信息查询图片</span><em>是</em></td>	
+					        		<td colspan="2">
+					        			<span>从业经历</span><em id="borrower_family_assets"></em>
+					        		</td>				        						        		
+					        	</tr>
+					        </table>
+					    </div>    
+				        <div class="houseInfo">
+				        	<table border="1" class="basic-info house-car-assets">
+				        		<tr><td>权利人名称</td><td>资产类型</td><td colspan="2">物业名称及位置</td></tr>
+					        	<tr>
+					        		<td>房产</td>
+					        		<td><em id="property_house_assets"></em></td>
+					        		<td colspan="2"><em id="house_place"></em></td>
+					        	</tr>
+					        	<tr><td >权利人名称</td><td>评估值</td><td colspan="2">抵质押、借款情况</td></tr>
+					        	<tr>
+					        		<td>房产</td>
+					        		<td><em id="house_evaluation"></em></td>
+					        		<td colspan="2"><em id="house_loan"></em></td>
+					        	</tr>
+					        	<tr><td >权利人名称</td><td>面积/数量</td><td>购入日期</td><td>购买价</td></tr>
+					        	<tr>
+					        		<td>房产</td>
+					        		<td><em id="house_num"></em></td>
+					        		<td><em id="house_date"></em></td>
+					        		<td><em id="property_house_price"></em></td>
+					        	</tr>
+					        </table>
+				        </div>
+				        <div class="carInfo" >
+				        	<table border="1" class="basic-info house-car-assets">	
+					        	<tr><td>权利人名称</td><td>品牌</td><td>型号</td><td>车牌号</td></tr>					        	
+					        	<tr>
+					        		<td>车产</td>
+					        		<td><em id="car_assets"></em></td>
+					        		<td><em id="car_assets"></em></td>
+					        		<td><em id="car_assets"></em></td>
+					        	</tr>
+					        	<tr><td >权利人名称</td><td>发动机号</td><td>车架号</td><td>购入日期</td></tr>
+					        	<tr>
+					        		<td>车产</td>
+					        		<td><em id="car_assets"></em></td>
+					        		<td><em id="car_assets"></em></td>
+					        		<td><em id="car_date"></em></td>
+					        		
+					        	</tr>
+					        	<tr><td >权利人名称</td><td>购买价</td><td>评估价</td><td>图片</td></tr>
+					        	<tr>
+					        		<td>车产</td>
+					        		<td><em id="car_car_price"></em></td>
+					        		<td><em id="car_evaluation"></em></td>
+					        		<td><em id="car_yesNo"></em></td>
+					        	</tr>
+					        	<tr><td >权利人名称</td><td colspan="3">抵质押、借款情况</td></tr>
+					        	<tr>
+					        		<td>车产</td>
+					        		<td colspan="3"><em id="loan">efeg</em></td>
+					        	</tr>
+				       		</table>
+				        </div>
+				        <!-- <div>
+				        	<table border="1" class="basic-info house-car-assets">
+					        	<tr>
+					        		<td>其他资产</td>
+					        		<td><em id="other_assets"></em></td>
+					        		<td colspan="2"><em id="other_place"></em></td>
+					        	</tr>
+					        	<tr>
+					        		<td>其他资产</td>
+					        		<td><em id="other_evaluation"></em></td>
+					        		<td colspan="2"><em id="other_loan"></em></td>
+					        	</tr>
+					        	<tr>
+					        		<td>其他资产</td>
+					        		<td><em id="other_num"></em></td>
+					        		<td><em id="other_date"></em></td>
+					        		<td><em id="other_price"></em></td>
+					        	</tr>
+					        	<tr>
+					        		<td colspan="4"><span>餐饮店主从业经历描述：</span><em id="owner_experience"></em></td>
+					        	</tr>
+				        	</table>
+				        </div> -->
+				        	
+				    </div>  
+					
+
+	<script language="javascript" src="LodopFuncs.js"></script>
+	<object  id="LODOP_OB" classid="clsid:2105C259-1E0C-4534-8141-A753534CB4CA" width=0 height=0> 
+	       <embed id="LODOP_EM" type="application/x-print-lodop" width=0 height=0></embed>
+	</object>
+	</body>
+	<%@include file="/page/common/foot.jsp" %>
+    <script src="${pageContext.request.contextPath}/resources/js/loanproject/viewP.js" type="text/javascript" charset="utf-8"></script>
+	<script src="${pageContext.request.contextPath}/resources/js/loanproject/screen-adapter.js" type="text/javascript" charset="utf-8"></script>
+	<script src="${pageContext.request.contextPath}/resources/js/loanproject/jquery.js" type="text/javascript" charset="utf-8"></script>
+	
+	<script>
+	$(document).ready(function(){
+    	
+    	init();
+    	
+	  });
+		
+	</script>
+	
+	
+</html>
